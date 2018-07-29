@@ -1,12 +1,22 @@
 import React from 'react'
-import {HashRouter as Router} from 'react-router-dom'
+import {connect} from 'react-redux'
+import {Route} from 'react-router-dom'
+
+// components
+import Nav from './Nav'
+import Home from './Home'
+import About from './About'
+import Prints from './Prints'
+
+
 
 const App = () => (
-  <Router>
     <div className='app-container section'>
-      <h1>Hello World</h1>
+      <Nav/>
+      <Route exact path='/' component={Home}/>
+      <Route exact path='/about' component={About}/>
+      <Route exact path='/prints' component={Prints}/>
     </div>
-  </Router>
 )
 
-export default App
+export default connect()(App)
