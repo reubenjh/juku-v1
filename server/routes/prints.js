@@ -7,7 +7,6 @@ router.get('/', getAllPrints)
 function getAllPrints (req, res) {
     db.getPrints()
         .then(prints => {
-            console.log(prints)
             res.status(200).json({prints})
         })
         .catch(err => {

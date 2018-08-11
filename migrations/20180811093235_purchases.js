@@ -4,6 +4,7 @@ exports.up = function(knex, Promise) {
         table.increments('id').primary()
         table.timestamp('purchased_at').defaultTo(knex.fn.now())
         table.string('print_id')
+        table.integer('quantity')
         table.string('email_address')
         table.string('postal_address')
     })
