@@ -5,6 +5,7 @@ exports.up = function(knex, Promise) {
         table.timestamp('purchased_at').defaultTo(knex.fn.now())
         table.string('print_id')
         table.integer('quantity')
+        table.integer('price')
         table.string('email_address')
         table.string('postal_address')
     })

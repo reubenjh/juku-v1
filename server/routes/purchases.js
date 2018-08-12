@@ -18,8 +18,12 @@ function addNewPurchase (req, res) { // note - purchase ojjects should mirror pr
     new Promise((resolve, reject) => {
         cart.forEach(print => {
             const {print_id, quantity} = print
-            const purchase = {print_id, quantity, email_address, postal_address}
+            const price = print.price * quantity
+            const purchase = {print_id, quantity, email_address, postal_address, price}
             db.addPurchase(purchase)
+                .then((inserts) => {
+                    // decrease quantity
+                })
                 .catch(err => reject(err))
         })
     })

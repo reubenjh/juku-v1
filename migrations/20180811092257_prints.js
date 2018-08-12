@@ -6,6 +6,7 @@ exports.up = function(knex, Promise) {
       table.string('image', 1000)
       table.string('description', 1000)
       table.integer('quantity')
+      table.integer('price')
   })
 };
 
