@@ -5,8 +5,8 @@ exports.seed = function(knex, Promise) {
     .then(function () {
       // Inserts seed entries
       return knex('prints').insert([
-        {title: 'juicy melons', description: 'juicy juicy melons from spain', quantity: 1},
-        {title: 'pumpernickel', description: 'i drew this while eating pumpernickel', quantity: 1}
+        {title: 'juicy melons', description: 'juicy juicy melons from spain', quantity: 1, image: 'images/fakeart.jpg'},
+        {title: 'pumpernickel', description: 'i drew this while eating pumpernickel', quantity: 1, image: 'images/fakeart.jpg'}
       ]);
     });
 };
