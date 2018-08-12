@@ -3,7 +3,7 @@ import { connect } from 'react-redux'
 import { Link } from 'react-router-dom'
 
 const Nav = () => (
-    <nav className="navbar is-spaced is-transparent" role="navigation" aria-label="main navigation">
+    <nav className="navbar is-spaced" role="navigation" aria-label="main navigation">
         <div className='container'>
             <div className="navbar-brand">
                 <Link to='/' className='navbar-item'><h4 className='title is-4'>Juku</h4></Link>

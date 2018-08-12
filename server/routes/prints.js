@@ -13,3 +13,5 @@ function getAllPrints (req, res) {
             res.status(500).send({message: 'Server error', err})
         })
 }
+
+module.exports = router
