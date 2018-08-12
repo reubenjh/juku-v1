@@ -11,7 +11,7 @@ class Prints extends React.Component {
     super(props)
   }
 
-  componentDidMount () {
+  componentDidMount() {
 
   }
 
@@ -19,17 +19,23 @@ class Prints extends React.Component {
   render() {
     const prints = this.props.prints.list
 
-    return <div>
-      <Nav />
-      <div className='section'>
-        <h1 className='title is-1 has-text-centered'>Prints</h1>
-        <div className='columns is-multiline'>
-          {prints.map(p => <Print print={p}/>)}
+    return (
+      <div>
+        <Nav />
+        <div className='section'>
+          <div className='columns is-centered'>
+            <div className='column is-10'>
+              <h1 className='title is-1 has-text-centered'>Prints</h1>
+              <div className='columns is-multiline'>
+                {prints.map(p => <Print print={p} />)}
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
+    )
   }
 }
 
-const mapStateToProps = ({prints}) => ({prints})
+const mapStateToProps = ({ prints }) => ({ prints })
 export default connect(mapStateToProps)(Prints)
