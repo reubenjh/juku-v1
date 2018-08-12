@@ -2,7 +2,7 @@ import React from 'react'
 import { connect } from 'react-redux'
 
 const Print = (props) => {
-    const { title, quantity, description, image, price } = props.print
+    const { title, quantity, description, image, price} = props.print
     return (
         <div className='column is-6'>
             <div className='columns is-multiline'>

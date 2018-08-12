@@ -3,6 +3,7 @@ import { connect } from 'react-redux'
 
 import Nav from './Nav'
 import Print from './Print'
+import {getPrints} from '../actions/prints'
 
 ///
 
@@ -12,12 +13,12 @@ class Prints extends React.Component {
   }
 
   componentDidMount() {
-
+    this.props.dispatch(getPrints())
   }
 
 
   render() {
-    const prints = this.props.prints.list
+    const prints = this.props.prints.available
 
     return (
       <div>
@@ -27,7 +28,7 @@ class Prints extends React.Component {
             <div className='column is-10'>
               <h1 className='title is-1 has-text-centered'>Prints</h1>
               <div className='columns is-multiline'>
-                {prints.map(p => <Print print={p} />)}
+                {prints.map(p => <Print print={p} key={p.id}/>)}
               </div>
             </div>
           </div>
