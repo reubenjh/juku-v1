@@ -1,6 +1,6 @@
 import {combineReducers} from 'redux'
-import art from './art'
+import prints from './prints'
 
 export default combineReducers({
-  art
+  prints
 })

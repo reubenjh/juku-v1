@@ -3,32 +3,29 @@ import { connect } from 'react-redux'
 import { Link } from 'react-router-dom'
 
 const Nav = () => (
-    <div>
-        <div className='columns has-text-centered'>
-            <div className='column is-3 doesnt-stack-mobile'>
-                <Link to='/prints'>
-                    <p>
-                        prints
-                </p>
-                </Link>
+    <nav className="navbar is-spaced" role="navigation" aria-label="main navigation">
+        <div className='container'>
+            <div className="navbar-brand">
+                <Link to='/' className='navbar-item'><h4 className='title is-4'>Juku</h4></Link>
+                <a role="button" className="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false">
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                </a>
             </div>
-            <div className='column is-6 doesnt-stack-mobile'>
-                <Link to='/'>
-                    <h3 className='title is-3'>
-                        Juku
-                </h3>
-                </Link>
-            </div>
-            <div className='column is-3 doesnt-stack-mobile'>
-                <Link to='/about'>
-                    <p>
-                        about
-                    </p>
-                </Link>
+
+            <div className='navbar-menu' id="navMenu">
+                <div className="navbar-start">
+                </div>
+
+                <div className="navbar-end">
+                    <Link to='/prints' className='navbar-item'>prints</Link>
+                    <Link to='/about' className='navbar-item'>about</Link>
+                    <Link to='/contact' className='navbar-item'>contact</Link>
+                </div>
             </div>
         </div>
-        <hr />
-    </div>
+    </nav>
 )
 
 export default connect()(Nav)
