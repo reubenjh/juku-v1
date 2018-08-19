@@ -11,7 +11,7 @@ const Home = () => (
     <Nav />
     <div className='banner has-text-centered'>
       <h1 className='title is-1 has-text-white'>i'm julia, i make prints</h1>
-      <Link to='/prints' className='has-text-white'>wanna buy one?</Link>
+      <Link to='/prints' id='banner-button' className='button is-info is-inverted is-outlined'>wanna buy one?</Link>
     </div>
   </div>
 )
